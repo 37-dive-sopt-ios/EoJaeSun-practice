@@ -70,13 +70,13 @@ final class LoginViewController: UIViewController {
     private func presentToWelcomeVC() {
         let vc = WelcomeViewController()
         vc.modalPresentationStyle = .overFullScreen
-        vc.name = idTextField.text
+        vc.setLabelText(id: idTextField.text)
         self.present(vc, animated: true)
     }
     
     private func pushToWelcomeVC() {
         let welcomeViewController = WelcomeViewController()
-        welcomeViewController.name = idTextField.text
+        welcomeViewController.setLabelText(id: idTextField.text)
         self.navigationController?.pushViewController(welcomeViewController, animated: true)
     }
     

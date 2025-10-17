@@ -12,7 +12,7 @@ import UIKit
 
 final class WelcomeViewController: UIViewController {
     
-    var name: String?
+    private var id: String?
     
     private let logoImageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 113, y: 87, width: 150, height: 150))
@@ -78,7 +78,11 @@ final class WelcomeViewController: UIViewController {
     
     
     private func bindID() {
-        guard let nameText = name else { return }
+        guard let nameText = id else { return }
         self.welcomeLabel.text = "\(nameText)님 \n반가워요!"
+    }
+    
+    func setLabelText(id: String?) {
+        self.id = id
     }
 }
