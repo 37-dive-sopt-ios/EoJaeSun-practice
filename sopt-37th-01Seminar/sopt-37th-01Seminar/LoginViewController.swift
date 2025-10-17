@@ -25,8 +25,7 @@ final class LoginViewController: UIViewController {
         textField.font = UIFont(name: "Pretendard-SemiBold", size: 14)
         textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
         textField.layer.cornerRadius = 3
-        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textField.frame.height))
-        textField.leftViewMode = .always
+        textField.addLeftPadding(10)
         
         return textField
     }()
@@ -38,8 +37,7 @@ final class LoginViewController: UIViewController {
         textField.isSecureTextEntry = true
         textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
         textField.layer.cornerRadius = 3
-        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textField.frame.height))
-        textField.leftViewMode = .always
+        textField.addLeftPadding(10)
         return textField
     }()
     
