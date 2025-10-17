@@ -35,7 +35,7 @@ final class LoginViewController: UIViewController {
         let textField = UITextField(frame: CGRect(x: 20, y: 335, width: 335, height: 52))
         textField.placeholder = "비밀번호"
         textField.font = UIFont(name: "Pretendard-SemiBold", size: 14)
-        textField.isSecureTextEntry = trueadfasf
+        textField.isSecureTextEntry = true
         textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
         textField.layer.cornerRadius = 3
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textField.frame.height))
@@ -76,12 +76,20 @@ final class LoginViewController: UIViewController {
     
     private func pushToWelcomeVC() {
         let welcomeViewController = WelcomeViewController()
+        welcomeViewController.name = idTextField.text
         self.navigationController?.pushViewController(welcomeViewController, animated: true)
     }
     
     @objc
     private func loginButtonDidTap() {
-        presentToWelcomeVC()
+        guard let id = idTextField.text else { return }
+        guard let pw = passwordTextField.text else { return }
+        
+        if !id.isEmpty && !pw.isEmpty {
+            pushToWelcomeVC()
+        }
+        
     }
     
 }
+

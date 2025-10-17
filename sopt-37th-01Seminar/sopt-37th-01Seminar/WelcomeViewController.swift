@@ -15,8 +15,8 @@ final class WelcomeViewController: UIViewController {
     var name: String?
     
     private let logoImageView: UIImageView = {
-        let imageView = UIImageView(frame: CGRect(x: 112, y: 87, width: 150, height: 150))
-        imageView.image = UIImage(named: "logo2")
+        let imageView = UIImageView(frame: CGRect(x: 113, y: 87, width: 150, height: 150))
+        imageView.image = UIImage(named: "logo1")
         return imageView
     }()
     
@@ -34,6 +34,7 @@ final class WelcomeViewController: UIViewController {
         button.backgroundColor = UIColor(red: 255/255, green: 111/255, blue: 15/255, alpha: 1)
         button.setTitle("메인으로", for: .normal)
         button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 6
         button.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 18)
         return button
     }()
@@ -41,9 +42,10 @@ final class WelcomeViewController: UIViewController {
     private lazy var backToLoginButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 20, y: 498, width: 335, height: 58))
         button.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
-        button.setTitle("로그인하기", for: .normal)
+        button.setTitle("다시 로그인", for: .normal)
         button.setTitleColor(UIColor(red: 172/255, green: 176/255, blue: 185/255, alpha: 1), for: .normal)
         button.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 18)
+        button.layer.cornerRadius = 6
         button.addTarget(self, action: #selector(backToLoginButtonDidTap), for: .touchUpInside)
         return button
     }()
