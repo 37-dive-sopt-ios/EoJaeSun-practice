@@ -1,16 +1,19 @@
 //
-//  WelcomeViewController.swift
+//  WelcomeViewController_Closure.swift
 //  sopt-37th-01Seminar
 //
-//  Created by 어재선 on 10/11/25.
+//  Created by 어재선 on 10/18/25.
 //
 
 import Foundation
 import UIKit
 
-final class WelcomeViewController: UIViewController {
+
+final class WelcomeViewController_Closure: UIViewController {
     
     private var id: String?
+    
+    var completionHandler: ((String) -> Void)?
     
     private let logoImageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 113, y: 87, width: 150, height: 150))
@@ -67,6 +70,10 @@ final class WelcomeViewController: UIViewController {
     
     @objc
     private func backToLoginButtonDidTap() {
+        guard let nickname = id else {return}
+        
+        completionHandler?("\(nickname)님이 다시 로그인 버튼을 눌렀어요!")
+    
         if self.navigationController == nil {
             self.dismiss(animated: true)
         } else {
@@ -83,4 +90,6 @@ final class WelcomeViewController: UIViewController {
     func setLabelText(id: String?) {
         self.id = id
     }
+    
+
 }

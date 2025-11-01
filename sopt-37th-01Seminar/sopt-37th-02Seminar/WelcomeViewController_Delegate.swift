@@ -1,16 +1,22 @@
 //
-//  WelcomeViewController.swift
+//  WelcomeViewController_Delegate.swift
 //  sopt-37th-01Seminar
 //
-//  Created by 어재선 on 10/11/25.
+//  Created by 어재선 on 10/18/25.
 //
 
 import Foundation
 import UIKit
 
-final class WelcomeViewController: UIViewController {
+protocol WelcomeReloginDelegate: AnyObject {
+    func retryLogin(didTapReloginWith message: String)
+}
+
+final class WelcomeViewController_Delegate: UIViewController {
     
     private var id: String?
+    
+    weak var delegate: WelcomeReloginDelegate?
     
     private let logoImageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 113, y: 87, width: 150, height: 150))
@@ -67,6 +73,8 @@ final class WelcomeViewController: UIViewController {
     
     @objc
     private func backToLoginButtonDidTap() {
+        
+        delegate?.retryLogin(didTapReloginWith: "다시 로그인 버튼을 눌렀어요!")
         if self.navigationController == nil {
             self.dismiss(animated: true)
         } else {
