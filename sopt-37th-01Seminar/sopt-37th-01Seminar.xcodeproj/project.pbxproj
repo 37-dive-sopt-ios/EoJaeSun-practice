@@ -11,11 +11,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4BFDE6A52E9A22CB00AAA8CA /* sopt-37th-01Seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sopt-37th-01Seminar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B42DC062EBF1B2000F679A9 /* sopt-37th-01Seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sopt-37th-01Seminar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		4BFDE6B72E9A22CD00AAA8CA /* Exceptions for "sopt-37th-01Seminar" folder in "sopt-37th-01Seminar" target */ = {
+		4B7A35D82EB5EA6F0060D7E7 /* Exceptions for "sopt-37th-01Seminar" folder in "sopt-37th-01Seminar" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -25,10 +25,20 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		4B42DC4F2EBF204F00F679A9 /* sopt-37th-04seminar */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "sopt-37th-04seminar";
+			sourceTree = "<group>";
+		};
+		4BDF930F2EB5C9D700823EDC /* sopt-37th-03Seminar */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "sopt-37th-03Seminar";
+			sourceTree = "<group>";
+		};
 		4BFDE6A72E9A22CB00AAA8CA /* sopt-37th-01Seminar */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				4BFDE6B72E9A22CD00AAA8CA /* Exceptions for "sopt-37th-01Seminar" folder in "sopt-37th-01Seminar" target */,
+				4B7A35D82EB5EA6F0060D7E7 /* Exceptions for "sopt-37th-01Seminar" folder in "sopt-37th-01Seminar" target */,
 			);
 			path = "sopt-37th-01Seminar";
 			sourceTree = "<group>";
@@ -55,18 +65,12 @@
 		4BFDE69C2E9A22CB00AAA8CA = {
 			isa = PBXGroup;
 			children = (
+				4B42DC4F2EBF204F00F679A9 /* sopt-37th-04seminar */,
+				4BDF930F2EB5C9D700823EDC /* sopt-37th-03Seminar */,
 				4BFDE6EB2EA35F1800AAA8CA /* sopt-37th-02Seminar */,
 				4BFDE6A72E9A22CB00AAA8CA /* sopt-37th-01Seminar */,
-				4BFDE6A62E9A22CB00AAA8CA /* Products */,
+				4B42DC062EBF1B2000F679A9 /* sopt-37th-01Seminar.app */,
 			);
-			sourceTree = "<group>";
-		};
-		4BFDE6A62E9A22CB00AAA8CA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4BFDE6A52E9A22CB00AAA8CA /* sopt-37th-01Seminar.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +89,8 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				4B42DC4F2EBF204F00F679A9 /* sopt-37th-04seminar */,
+				4BDF930F2EB5C9D700823EDC /* sopt-37th-03Seminar */,
 				4BFDE6A72E9A22CB00AAA8CA /* sopt-37th-01Seminar */,
 				4BFDE6EB2EA35F1800AAA8CA /* sopt-37th-02Seminar */,
 			);
@@ -93,7 +99,7 @@
 				4BFDE6FA2EA3859300AAA8CA /* SnapKit */,
 			);
 			productName = "sopt-37th-01Seminar";
-			productReference = 4BFDE6A52E9A22CB00AAA8CA /* sopt-37th-01Seminar.app */;
+			productReference = 4B42DC062EBF1B2000F679A9 /* sopt-37th-01Seminar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -124,7 +130,7 @@
 				4BFDE6F92EA3859300AAA8CA /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 4BFDE6A62E9A22CB00AAA8CA /* Products */;
+			productRefGroup = 4BFDE69C2E9A22CB00AAA8CA;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
